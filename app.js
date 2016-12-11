@@ -11,7 +11,7 @@ var opts = {
   // 允许传输gzip，如静态文件夹下有两个文件，index.js和index.js.gz，
   // 会优先传输index.js.gz，默认开启
 };
-app.use(server('~/www/static', opts));
+app.use(server('../../www/static', opts));
 
 // app.use(function *(){
 //   this.body = 'Hello World';
