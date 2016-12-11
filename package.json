@@ -1,0 +1,22 @@
+{
+  "name": "wxserver",
+  "version": "1.0.0",
+  "description": "wxserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flashyu/WxServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flashyu/WxServer/issues"
+  },
+  "homepage": "https://github.com/flashyu/WxServer#readme",
+  "devDependencies": {
+    "koa": "^1.2.4"
+  }
+}
