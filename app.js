@@ -20,12 +20,13 @@ router.get('/api/getWxConfig', koaBody, function *(next){
 	var timestamp = getTimesTamp();
 	var isExpire = timestamp - lastRequestTime > expiresIn;
 	var nonceStr = getNonceStr();
-	var url = this.query.url;
+	var url = decodeURIComponent(this.query.url);
 	var ticket;
 	if (ticketCache && !isExpire) {
 		ticket = ticketCache;
 	}else{
 		var token = yield getToken(config);
+		lastRequestTime = getTimesTamp();
 		var data = yield getNewTicket(token);
 		ticketCache = data.ticket;
 		expiresIn = data.expires_in || 0;
