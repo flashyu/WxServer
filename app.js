@@ -28,7 +28,7 @@ router.get('/api/getWxConfig', koaBody, function *(next){
 		var token = yield getToken(config);
 		lastRequestTime = getTimesTamp();
 		var data = yield getNewTicket(token);
-		ticketCache = data.ticket;
+		ticket = ticketCache = data.ticket;
 		expiresIn = data.expires_in || 0;
 		lastRequestTime = getTimesTamp();
 	}
