@@ -16,7 +16,7 @@ var config = {
 	appSecret: 'c9f96381e1a1907c2e99eea9797f92f6'
 };
 
-router.getJ('/api/getWxConfig', koaBody, function *(next){
+router.get('/api/getWxConfig', koaBody, function *(next){
 	var timestamp = getTimesTamp();
 	var isExpire = timestamp - lastRequestTime > expiresIn;
 	var nonceStr = getNonceStr();
