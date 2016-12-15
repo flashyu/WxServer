@@ -78,8 +78,7 @@ function getNewTicket(token) {
 	        else {
 	            try {
 	                var data = JSON.parse(body);
-	                console.log(data)
-	                resolve({token:data.ticket, expires_in:data.expires_in})
+	                resolve({ticket:data.ticket, expires_in:data.expires_in})
 	            }
 	            catch (e) {
 	                reject('getNewTicket error', e);
